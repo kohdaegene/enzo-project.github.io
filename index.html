@@ -12,7 +12,7 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="../1.3.0/bootstrap.css" rel="stylesheet">
+    <link href="1.3.0/bootstrap.css" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script> 
     <script src="http://autobahn.tablesorter.com/jquery.tablesorter.min.js"></script> 
@@ -25,7 +25,7 @@
  
     <style type="text/css">
       body {
-        padding-top: 60px;
+        padding-top: 40px;
       }
     </style>
 
@@ -38,15 +38,16 @@
 
   <body>
 
-    <div class="topbar" data-dropdown="dropdown">
+    <div class="topbar" data-dropdown="dropdown" data-scrollspy="scrollspy">
       <div class="fill">
         <div class="container">
           <a class="brand" href="#">Enzo</a>
           <ul class="nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#getstarted">Get Started</a></li>
-            <li><a href="#about">Development</a></li>
-            <li><a href="#contact">Community</a></li>
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#gettingenzo">Get Enzo</a></li>
+            <li><a href="#help">Help!</a></li>
+            <li><a href="#developing">Development</a></li>
+            <li><a href="#community">Community</a></li>
             <li class="dropdown"><a href="#" class="dropdown-toggle">Enzo Docs</a>
                 <ul class="dropdown-menu">
                 <li><a href="doc/2.0/">Enzo 2.0</a></li>
@@ -62,32 +63,116 @@
 
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
-        <h1>The Enzo Project</h1>
-        <p>This is the homepage for Enzo, a community-developed Adaptive
-        Mesh Refinement platform designed for physically-rich simulations of
-        astrophysical phenomena.</p>
-        <p><a class="btn primary large">Learn more &raquo;</a></p>
+        <a name="home"><h1>The Enzo Project</h1></a>
       </div>
 
       <!-- Example row of columns -->
       <div class="row">
         <div class="span8">
-          <h2>Getting Started</h2>
-          <p>Stuff about getting started.</p>
-          <p><a class="btn" href="#getstarted">View details &raquo;</a></p>
+          <h2>What is Enzo?</h2>
+          <p>Enzo is a community-developed adaptive mesh refinement simulation
+          code, designed for rich, multi-physics hydrodynamic astrophysical
+          calculations.</p>
+          <p>Enzo is freely available, developed in the open, with a strong
+          support structure for assistance.  Simulations conducted with Enzo
+          have been featured in numerous refereed journal articles, and it is
+          capable of running on computers from laptop to Top500.</p>
         </div>
-        <div class="span4">
-          <h2>Developing</h2>
-           <p>Downloading the source, making changes, contributing.</p>
-          <p><a class="btn" href="#developing">View details &raquo;</a></p>
-       </div>
-        <div class="span4">
-          <h2>Help!</h2>
-          <p>Finding others, joining the community, asking questions and
-          learning about Enzo.</p>
-          <p><a class="btn" href="#help">View details &raquo;</a></p>
+        <div class="span8">
+          <div class="row">
+            <div class="span4">
+              <h2>Getting Enzo</h2>
+              <p>Enzo can be obtained in several places, corresponding to the
+              degree of stability and development accessibility.</p>
+              <p><a class="btn primary" href="#gettingenzo">Let's go! &raquo;</a></p>
+            </div>
+            <div class="span4">
+              <h2>Help!</h2>
+              <p>There are several places to get help with Enzo, from mailing
+              lists to documentation to online tutorials and recordings of
+              workshop presentations.</p>
+              <p><a class="btn" href="#help">Help me out! &raquo;</a></p>
+            </div>
+          </div> <!-- inner row -->
+          <div class="row" style="padding: 1.0em;">&nbsp;</div>
+          <div class="row">
+            <div class="span4">
+              <h2>Developing</h2>
+              <p>Enzo is developed in the open by a community of developers
+              from different institutions.  Contributions, fixes, and changes
+              are all welcomed!</p>
+              <p><a class="btn" href="#developing">Develop! &raquo;</a></p>
+            </div>
+            <div class="span4">
+              <h2>Community</h2>
+              <p>There are several places to get help with Enzo, from mailing
+              lists to documentation to online tutorials and recordings of
+              workshop presentations.</p>
+              <p><a class="btn" href="#help">Engage &raquo;</a></p>
+            </div>
+          </div> <!-- inner row -->
         </div>
-      </div>
+      </div> <!-- outer row -->
+
+      <section id="gettingenzo" style="padding-top:10.0em;">
+        <div class="page-header">
+          <a name="gettingenzo"><h1>Getting Enzo</h1></a>
+        </div>
+        <div class="row">
+          <div class="span4">
+            <h3>Places To Go</h3>
+            <ul>
+              <li>Google Code</li>
+              <li>BitBucket</li>
+              <li>Downloads</li>
+            </ul>
+          </div>
+          <div class="span12">
+            <p>Enzo is developed at Google Code and BitBucket</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="help" style="padding-top:10.0em;">
+        <div class="page-header">
+          <a name="help"><h1>Help!</h1></a>
+        </div>
+        <div class="row">
+          <div class="span4">
+            <h3>Places To Go</h3>
+            <ul>
+              <li>Current Documentation</li>
+              <li>IRC</li>
+              <li>Mailing Lists</li>
+              <li>Bug Tracker</li>
+              <li>Videos</li>
+            </ul>
+          </div>
+          <div class="span12">
+            <p>There are plenty of places to get help.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="help" style="padding-top:10.0em;">
+        <div class="page-header">
+          <a name="Developing"><h1>Developing Enzo</h1></a>
+        </div>
+        <div class="row">
+          <div class="span4">
+            <h3>Places To Go</h3>
+            <ul>
+              <li>Developer Guidelines</li>
+              <li>BitBucket</li>
+              <li>Development Dashboard</li>
+              <li>Google Code</li>
+            </ul>
+          </div>
+          <div class="span12">
+            <p>We have a clear path for how to develop and contribute code.</p>
+          </div>
+        </div>
+      </section>
 
       <footer>
         <p>Enzo enjoys the support of numerous universities, funding agencies
