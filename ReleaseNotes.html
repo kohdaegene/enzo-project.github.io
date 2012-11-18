@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The Enzo Project -- Release Notes</title>
+    <link rel="shortcut icon" href="favicon.png" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> 
+    <script src="assets/js/google-code-prettify/prettify.js"></script> 
+    <script>$(function () { prettyPrint() })</script> 
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Enzo</a>
+          <ul class="nav">
+            <li class="dropdown">
+	      <a class="dropdown-toggle" data-toggle="dropdown" href="#" >Quick Links <span class="caret"></span></a>
+	      <ul class="dropdown-menu">
+                <li><a href="doc/">Current Documentation</a></li>
+                <li><a href="http://bitbucket.org/enzo/enzo-stable">Stable Code</a></li>
+                <li><a href="http://bitbucket.org/enzo/enzo-dev">Development Code</a></li>
+                <li><a href="irc.html">IRC</a></li>
+	      </ul>
+            </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#gettingenzo">Get Enzo</a></li>
+            <li><a href="index.html#help">Help!</a></li>
+            <li><a href="index.html#developing">Development</a></li>
+            <li><a href="index.html#community">Community</a></li>
+            <li class="dropdown">
+	      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Enzo Docs <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="docs/2.2/">Version 2.2</a></li>
+                <li><a href="docs/2.1/">Version 2.1</a></li>
+                <li><a href="docs/2.0/">Version 2.0</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <section id="home">
+        <div class="hero-unit hero-border">
+          <a name="home" class="anchor"><h1>The Enzo Project</h1></a>
+        </div>
+      </section>
+
+      <section id="releasenotes">
+        <div class="page-header">
+          <a name="releasenotes" class="anchor"><h1>Release Notes</h1></a>
+        </div>
+
+	<div class="accordion" id="accordion2">
+	  <div class="accordion-group">
+	    <div class="accordion-heading">
+	      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Enzo22">
+		<h2>Enzo 2.2</h2>
+	      </a>
+	    </div>
+
+	    <div id="Enzo22" class="accordion-body collapse in">
+	      <div class="accordion-inner">
+
+		<p><i>Release Date &ndash; Nov. 19, 2012</i></p>
+		
+		<ul class="nav nav-tabs">
+		  <li class="active"><a href="#releasenotes22" data-toggle="tab">Release Notes</a></li>
+		  <li><a href="#changelog22" data-toggle="tab">Changelog</a></li>
+		</ul>
+	
+		<div class="tab-content">
+		  <div class="tab-pane active" id="releasenotes22">
+		    
+		    <p>We are proud to announce the public release of Enzo version 2.2. This intermediate release contains several new physics modules, reorganized and updated documentation, revamped answer testing, improvements to code infrastructure, as well as numerous bug fixes. In a little bit more detail:</p>
+		    
+		    <ol>
+		      <li>
+			New physics capabilities
+			<ul>
+			  <li>
+			    Supernova Ia feedback
+			    <p>[Description from J. Wise]</p>
+			  </li>
+			  <li>
+			    H<sub>2</sub>-regulated star formation
+			    <p>[Description from M. Kuhlen]</p>
+			  </li>
+			  <li>
+			    Support for a polytropic equation of state
+			    <p>[Description from C. Hummels]</p>
+			  </li>
+			  <li>
+			    Support for enforcing approximately constant spatial resolution in cosmological AMR simulations
+			    <p>[Description from C. Hummels]</p>
+			  </li>
+			</ul>
+		      </li>
+		      
+		      <li>
+			Timing and performance
+			<p>[Description from S. Skillman or C. Hummels]</p>
+		      </li>
+		      
+		      <li>
+			Improved Documentation
+			<p>[Description from J. Kim, J. Wise, or C. Hummels]</p>
+		      </li>
+		      
+		      <li>
+			Improvements to Answer Testing
+			<p>[Description from S. Skillman and/or B. Smith]</p>
+		      </li>
+		      
+		    </ol>
+		    
+		    <br>
+		    <p>With this release we continue our efforts to consolidate The Enzo Project's web presence, with the goal of lowering the barrier to entry for new users and easing further code development:</p>
+
+		    <ul>
+		      <li>
+			Enzo's main webpage continues to be <a href="http://enzo-project.org">http://enzo-project.org</a>. Links and information can be found here for both developers and general users.
+		      </li>
+		      <li>
+			Both <a href="https://bitbucket.org/enzo/enzo-stable">stable</a> <b>[NOT YET!]</b> and <a href="https://bitbucket.org/enzo/enzo-dev">development</a> versions of the Enzo code are now hosted on Bitbucket.
+		      </li>
+		      <li>
+			For news and updates please follow our google+ page: <a href="https://plus.google.com/115923030596894217717">The Enzo Project</a>
+		      </li>
+		    </ul>
+
+		  </div>
+		  <div class="tab-pane" id="changelog22">
+		    <ul>
+		      <li> New Feature: Supernova Ia feedback </li>
+		      <li> New Feature: H<sub>2</sub>-regulated star formation prescription </li>
+		      <li> New Feature: Support for a polytropic equation of state. </li>
+		      <li> New Feature: Support for enforcing approximately constant spatial resolution in cosmological AMR simulations </li>
+		      <li> New Feature: Light-weight timing and performance measuring tool </li>
+		      <li> Enhancement: Improved inline yt analysis. </li>
+		      <li> Enhancement: Support for ghost-zone input/output. </li>
+		      <li> Enhancement: Reorganized and improved code documentation. </li>
+		      <li> Enhancement: Improvements to answer testing. </li>
+		      <li> Bugfix: Generalizing the conversion to conserved quantities. (PR #75) </li>
+		      <li> Bugfix: Fixing the set-acceleration-boundary compile flag. (PR #77) </li>
+		      <li> Bugfix: Bug fix in hydro shock tubes initialization (PR #76) </li>
+		      <li> Bugfix: Fix precision settings in WriteParameterFile. (PR #74) </li>
+		      <li> Bugfix: Fixing create_config_info.py to replace ^M with \n in the output of 'hg diff'. (PR #73)                </li>
+		      <li> Bugfix: MAX_ANY_DIRECTION check (PR #72)    </li>
+		      <li> Bugfix: Fixing memory leak. (PR #71)    </li>
+		      <li> Bugfix: Shocks on output bugfix (PR #70)    </li>
+		      <li> Bugfix: Backporting Mike's hdf5 hierarchy fixes. (PR #69) </li>
+		      <li> Bugfix: fix too-many-files issue with make dep (PR #65) </li>
+		      <li> Bugfix: Changing MAX_ANY_SINGLE_DIRECTION from 3079 to 1024. (PR #62) </li>
+		      <li> Bugfix: Minor fixes to H2 chemistry & cooling (PR #61) </li>
+		      <li> Bugfix: Removing extra 1/dom factor in MetalCooling = 1 (PR #59) </li>
+		      <li> Bugfix: Removing unused experimental chemistry code (PR #60) </li>
+		      <li> Bugfix: Adding -fdefault-double-8 for example machine files for GNU v4.6+ (PR #54) </li>
+		      <li> Bugfix: Change default setting for (the inaccurately named) bitwise-identicality setting to no (PR #47) </li>
+		      <li> Bugfix: Subgrid size change and FOF bugfix (PR #46) </li>
+		      <li> Bugfix: Fixed tracer particle allocation (PR #44) </li>
+		      <li> Bugfix: Sink particle merging fixes (PR #40) </li>
+		      <li> Bugfix: Docs for enzo performance measurement/analysis. (PR #38) </li>
+		      <li> Bugfix: Fixed small errorPartition Grid only if not already partitioned (PR #28) </li>
+		      <li> Bugfix: Small changes for GENum in AddFeedbackSphere and IdentifyPhysicalQuantites to avoid confusion with DensNum. (PR #25) </li>
+		      <li> Bugfix: Fix for Ghost Zone IO (PR #34) </li>
+		      <li> Bugfix: Fixing some errors in the description of Cen & Ostriker star (PR #33) </li>
+		      <li> Bugfix: moved ENZO_FAIL before the loop to see if fields already exist. this loop will be infinite if OldNumberOfBaryonFields + FieldsToAdd > MAX_NUMBER_OF_BARYON_FIELDS, so it's best to do the check first. (PR #31) </li>
+		      <li> Bugfix: Corrected Make.config.target's transposition of branch and revision info (PR #30)    </li>
+		      <li> Bugfix: Fixing small error (3.5%) in TemperatureUnits in CosmologyGetUnits.C (PR #26) </li>
+		      <li> Bugfix: Small doc fix. (PR #22) </li>
+		      <li> Bugfix: Changing enzo_unit_tests.h to Unix file format (PR #19) </li>
+		      <li> Bugfix: Bugfix MetalCooling=1 missing a factor of density (PR #16) </li>
+		      <li> Bugfix: Make inits work for 2D cosmology simulations  (PR #12) </li>
+		      <li> Bugfix: Deleting LevelArray variable after HDF5 hierarchy is written (PR #9) </li>
+		      <li> Bugfix: make HDF5Hierarchy work with particles-128 (PR #11) </li>
+		      <li> Bugfix: Fix urgent Ghost Zone bug (PR #14) </li>
+		      <li> Bugfix: dtPhoton lower limit (PR #5) </li>
+		      <li> Bugfix: HDF5 Hierarchy fix (PR #1) </li>
+		      <li> Bugfix: Fix the rotating cylinder test problem (PR #4) </li>
+		      
+		    </ul>
+		  </div>
+		</div>
+		
+		
+	      </div>
+	    </div>
+	  </div>
+	
+	  <div class="accordion-group">
+	    <div class="accordion-heading">
+	      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Enzo21">	
+		<h2>Enzo 2.1</h2>
+	      </a>
+	    </div>
+
+	    <div id="Enzo21" class="accordion-body collapse">
+	      <div class="accordion-inner">
+
+		<ul class="nav nav-tabs">
+		  <li class="active"><a href="#releasenotes21" data-toggle="tab">Release Notes</a></li>
+		  <li><a href="#changelog21" data-toggle="tab">Changelog</a></li>
+		</ul>
+		
+		<div class="tab-content">
+		  <div class="tab-pane active" id="releasenotes21">
+		    
+		    <h4>Enzo 2.1.1</h4>
+		    <p><i>Release Date &ndash; Oct. 27, 2011</i></p>	    
+		    
+		    <p> A minor release featuring mostly bugfixes. See the changelog for details.</p>
+		    
+		    <br>
+
+		    <h4>Enzo 2.1.0</h4>
+		    <p><i>Release Date &ndash; Oct. 17, 2011</i></p>	    
+		    
+		    <p>We are proud to announce the public release of Enzo version 2.1. New with this release is an extensive answer testing facility, additional physics capabilities, and AMR performance enhancements. New physics capabilities include isotropic and anisotropic heat conduction, X-ray ionization/heating, massive black hole particles, 4th-order accurate gravity solver, distributed stellar feedback, shock tracking, and improved molecular hydrogen chemistry. Performance improvements include Hilbert curve dynamic load balancing, faster ray tracing, and ray merging. We have improved Enzo’s inline analysis using the yt project, as well as user documentation for the entire Enzo codebase. We have also simplified the generation of multi-mesh cosmological initial conditions.</p>
+		    
+		    <p>In addition to code upgrades, we have upgraded and reorganized our online repositories and documentation. The Enzo Project’s main website is now <a href="http://enzo-project.org/" rel="nofollow">http://enzo-project.org/</a> .  Links and information can be found here for both developers and general users.  Our stable releases will continue to live on our Google code website: <a href="http://code.google.com/p/enzo/" rel="nofollow">http://code.google.com/p/enzo/</a> .  Users can clone a mercurial repository of our stable release code or download a tarball of the code (<a href="http://code.google.com/p/enzo/downloads/list" rel="nofollow">http://code.google.com/p/enzo/downloads/list</a> A simple quick-start guide can also be found here: <a href="http://code.google.com/p/enzo/wiki/EnzoBootCamp" rel="nofollow">http://code.google.com/p/enzo/wiki/EnzoBootCamp</a> We will now support versioned documentation for all stable releases since Enzo 2.0 in addition to the development code on enzo-project.org.  The documentation for Enzo 2.1 is located here: <a href="http://enzo-project.org/docs/2.1/" rel="nofollow">http://enzo-project.org/docs/2.1/</a>.</p>
+		    
+		    <p>Development will now move to our new Bitbucket repository where all users are encouraged to make contributions to the code by forking the main repository, located at <a href="https://bitbucket.org/enzo/enzo-dev" rel="nofollow">https://bitbucket.org/enzo/enzo-dev</a> . An explanation of new developer guidelines can be found here: <a href="http://enzo-project.org/docs/2.1/developer_guide/index.html" rel="nofollow">http://enzo-project.org/docs/2.1/developer_guide/index.html</a>. The current release of Enzo 2.1 features contributions, bug fixes and enhancements from an additional ten individuals (over the course of 2700 changesets) since Enzo 2.0, and through our new development infrastructure we are expanding our ability to solicit and review contributions.</p>
+		    
+		    <ul>
+		      <li>Main website: <a href="http://enzo-project.org/" rel="nofollow">http://enzo-project.org/</a> </li>
+		      <li>Mailing List: <a href="https://groups.google.com/forum/#!forum/enzo-users" rel="nofollow">https://groups.google.com/forum/#!forum/enzo-users</a> </li>
+		      <li>Stable repository: <a href="http://code.google.com/p/enzo/" rel="nofollow">http://code.google.com/p/enzo/</a> </li>
+		      <li>Tarball of Enzo 2.1.0: <a href="http://code.google.com/p/enzo/downloads/list" rel="nofollow">http://code.google.com/p/enzo/downloads/list</a> </li>
+		      <li>Enzo Boot Camp (a quick-start guide): <a href="http://code.google.com/p/enzo/wiki/EnzoBootCamp" rel="nofollow">http://code.google.com/p/enzo/wiki/EnzoBootCamp</a> </li>
+		      <li>Enzo 2.1.0 documentation: <a href="http://enzo-project.org/docs/2.1/" rel="nofollow">http://enzo-project.org/docs/2.1/</a> </li>
+		      <li>Developer’s repository: <a href="https://bitbucket.org/enzo/enzo-dev/overview" rel="nofollow">https://bitbucket.org/enzo/enzo-dev/overview</a> </li>
+		      <li>Developer’s guidlines: <a href="http://enzo-project.org/docs/2.1/developer_guide/index.html" rel="nofollow">http://enzo-project.org/docs/2.1/developer_guide/index.html</a> </li>
+		    </ul>
+		    
+		    <p>Enzo development is supported by grants AST-0808184 and OCI-0832662 from the National Science Foundation.</p>
+		    
+		  </div>
+		  <div class="tab-pane" id="changelog21">
+		    <h4>Enzo 2.1.1</h4>
+		    
+		    <ul>
+		      <li> Enhancement: Test suite is now fully operational. See run/README for more details. </li>
+		      <li> Enhancement: The “must refine” region can move with a user-defined, time-dependent refine region (parameter RefineRegionFile and refinement option 12) </li>
+		      <li> Bugfix: Enzo now compiles with HDF5 v1.6.x (Michael Kuhlen) </li>
+		      <li> Bugfix: User-defined time-dependent refine region now works with code time (David Collins) </li>
+		      <li> Bugfix: Photon timesteps no longer go to tiny numbers (~1e-20) in certain situations when using the HII-restricted timestepping algortihm.  </li>
+		    </ul>
+		    
+		    <br>
+
+		    <h4>Enzo 2.1.0</h4>
+		    
+		    <ul>
+		      <li> New feature: Isotropic and anisotropic heat conduction </li>
+		      <li> New feature: X-ray ionization and heating </li>
+		      <li> New feature: Massive black hole particles </li>
+		      <li> New feature: Testing suite </li>
+		      <li> New feature: Shock tracking </li>
+		      <li> New feature: Distributed stellar feedback across multiple cells </li>
+		      <li> Enhancement: Improved molecular hydrogen chemistry at high densities </li>
+		      <li> Enhancement: Fourth-order accurate gravity solver </li>
+		      <li> Enhancement: HDF5 based hierarchy file (off by default) </li>
+		      <li> Enhancement: Dust cooling -- Molecular hydrogen formation on dust grains </li>
+		      <li> Enhancement: Time-dependent Lyman-Werner radiation backgrounds </li>
+		      <li> Enhancement: Type Ia SNe and planetary nebulae feedback </li>
+		      <li> Enhancement: HLLC and HLL Riemann solvers for HD (HydroMethod=0) </li>
+		      <li> Enhancement: HLLD Riemann solver for MHD </li>
+		      <li> Enhancement: Improved inline analysis with yt </li>
+		      <li> Enhancement: Simplifed multi-mesh cosmological initial conditions with inits. </li>
+		      <li> Enhancement: Improved and expanded documentation </li>
+		      <li> Performance improvement: Load balancing on a space-filling curve </li>
+		      <li> Performance improvement: Parallel ray tracing </li>
+		      <li> Performance improvement: Ray tracing load balancing </li>
+		      <li> Changed all FORTRAN files to .F instead of .src to remove the pre-processing step. </li>
+		      <li> Various bugfixes over the past year.  </li>
+		    </ul>
+		    
+		  </div>
+		</div>
+		
+	      </div>
+	    </div>
+	  </div>
+	
+	  <div class="accordion-group">
+	    <div class="accordion-heading">
+	      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Enzo20">
+		<h2>Enzo 2.0</h2>
+	      </a>
+	    </div>
+	    
+	    <div id="Enzo20" class="accordion-body collapse">
+	      <div class="accordion-inner">
+
+		<ul class="nav nav-tabs">
+		  <li class="active"><a href="#releasenotes20" data-toggle="tab">Release Notes</a></li>
+		  <li><a href="#changelog20" data-toggle="tab">Changelog</a></li>
+		</ul>
+		
+		<div class="tab-content">
+		  <div class="tab-pane active" id="releasenotes20">
+		    
+		    <p><i>Release Date &ndash; Jul. 1, 2010</i></p>
+		    
+		    <p>We are proud to announce the public release of Enzo version 2.0. Enzo is a parallel code for astrophysical and cosmological simulations utilizing adaptive mesh refinement. Enzo 2.0 features many new physics capabilities including ideal MHD, radiation transport (ray tracing and flux limited diffusion), star particle class, metallicity-dependent cooling, and several new hydro solvers. More importantly, we have introduced new software tools to make using and developing Enzo easier. We have adopted distributed version control using Mercurial which supports the growing Enzo developer community. The documentation has been made more accessible and is now distributed with the source code. We have more than doubled the number of test problems and example problems as well as the number of developers!) In addition, we have added solution testing to the nightly regression tests.</p>
+		    
+		    <p>Enzo 2.0 is the product of developments made at UC San Diego, Stanford, Princeton, Columbia, MSU, CU Boulder, CITA, McMaster, SMU, and UC Berkeley.</p>
+		    
+		    <p>Enzo 2.0 now lives at <a href="http://enzo.googlecode.com/" rel="nofollow">http://enzo.googlecode.com/</a> to reflect its multi-institutional provenance. Prospective users are also encouraged to view online lectures from the 2010 Enzo Users&#x27; Workshop at <a href="http://lca.ucsd.edu/workshops/enzo2010" rel="nofollow">http://lca.ucsd.edu/workshops/enzo2010</a>. </p>
+		    
+		    <p>Enzo development is supported by grants AST-0808184 and OCI-0832662 from the National Science Foundation.</p>
+		    
+		  </div>
+		  <div class="tab-pane" id="changelog20">
+		    Not Available.
+		  </div>
+		</div>
+
+	      </div>
+	      
+	    </div>
+	  </div>
+
+	</div>
+	
+
+		
+      </section>
+	      
+      <footer>
+	<p>Enzo enjoys the support of numerous universities, funding agencies
+	and labs.</p>
+      </footer>
+      
+    </div> <!-- /container -->
+    
+  </body>
+</html>

@@ -13,16 +13,17 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="1.3.0/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> 
     <script src="http://autobahn.tablesorter.com/jquery.tablesorter.min.js"></script> 
+
     <script src="assets/js/google-code-prettify/prettify.js"></script> 
     <script>$(function () { prettyPrint() })</script> 
-    <script src="1.3.0/bootstrap-dropdown.js"></script> 
-    <script src="1.3.0/bootstrap-twipsy.js"></script> 
-    <script src="1.3.0/bootstrap-scrollspy.js"></script> 
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
     <script src="js/jquery.cycle.lite.js"></script> 
     <script>
     $(document).ready(function() {
@@ -32,11 +33,8 @@
                         }
                        });
         $("#myalertbox").delay(400).slideDown();
-        $('body > .topbar').scrollSpy();
-        $('body').scrollSpy('refresh');
         $("#myalertbox").click(function() {
             $("#myalertbox").slideUp();
-            $('body').scrollSpy('refresh');
         });
     });
     </script>
@@ -52,33 +50,41 @@
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+    <!-- Link to google+ page -->
+    <link href="https://plus.google.com/115923030596894217717" rel="publisher" />
+
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target=".navbar">
 
-    <div class="topbar" data-dropdown="dropdown" data-scrollspy="scrollspy">
-      <div class="fill">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
         <div class="container">
           <a class="brand" href="#">Enzo</a>
           <ul class="nav">
-            <li class="dropdown"><a href="#" class="dropdown-toggle">Quick Links</a>
-                <ul class="dropdown-menu">
+            <li class="dropdown">
+	      <a class="dropdown-toggle" data-toggle="dropdown" href="#" >Quick Links <span class="caret"></span></a>
+	      <ul class="dropdown-menu">
                 <li><a href="doc/">Current Documentation</a></li>
-                <li><a href="http://enzo.googlecode.com/">Stable Code</a></li>
-                <li><a href="http://bitbucket.org/enzo/">Development Code</a></li>
+                <li><a href="https://bitbucket.org/enzo/enzo-stable">Stable Code</a></li>
+                <li><a href="https://bitbucket.org/enzo/enzo-dev">Development Code</a></li>
+		<li><a href="BootCamp.html">Enzo Boot Camp</a></li>
                 <li><a href="irc.html">IRC</a></li>
-                </ul>
+	      </ul>
             </li>
             <li class="active"><a href="#home">Home</a></li>
             <li><a href="#gettingenzo">Get Enzo</a></li>
             <li><a href="#help">Help!</a></li>
             <li><a href="#developing">Development</a></li>
             <li><a href="#community">Community</a></li>
-            <li class="dropdown"><a href="#" class="dropdown-toggle">Enzo Docs</a>
-                <ul class="dropdown-menu">
-                <li><a href="docs/2.0/">Version 2.0</a></li>
+            <li class="dropdown">
+	      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Enzo Docs <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="docs/2.2/">Version 2.2</a></li>
                 <li><a href="docs/2.1/">Version 2.1</a></li>
-                </ul>
+                <li><a href="docs/2.0/">Version 2.0</a></li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -94,20 +100,19 @@
         </div>
 
         <div class="row" id="myalertbox">
-          <div class="span16">
-            <div class="alert-message">
-                <a class="close" href="#">×</a>
-                <p><strong>Enzo 2.1.0</strong> has been 
-                  <a href="https://groups.google.com/forum/#!topic/enzo-users/ipSiWF4p4-k">released!</a>
-                </p>
+          <div class="span12">
+	    <div class="alert alert-warning fade in">
+	      <a class="close" data-dismiss="alert">&times;</a>
+              <p><strong>Enzo 2.2</strong> has been released. View the <a href="ReleaseNotes.html ">Release Notes</a>!</p>
             </div>
           </div>
-        </div>
+	</div>
+	  
         <!-- Example row of columns -->
         <div class="row">
-          <div class="span8">
+          <div class="span6">
             <div class="row">
-              <div class="span8">
+              <div class="span6">
                 <h2>What is Enzo?</h2>
                 <p>Enzo is a community-developed adaptive mesh refinement simulation
                 code, designed for rich, multi-physics hydrodynamic astrophysical
@@ -118,34 +123,34 @@
                 capable of running on computers from laptop to Top500.</p>
               </div>
             </div>
-            <div class="row" style="padding-top: 1.0em;min-height:235px;">
-              <div class="span8" id="s1" align="center">
+            <div class="row" style="padding-top: 1.0em;min-height:245px;">
+              <div class="span6" id="s1" align="center">
                 <img src="images/ta-galaxies.png" width="460" height="230"
-                    alt="Tom Abel, John Wise, Ralf Kaehler"></a>
+                    alt="Tom Abel, John Wise, Ralf Kaehler"></img>
                 <img src="images/st_gb_rpress.jpg" width="460" height="230"
-                    alt="Stephanie Tonnesen & Greg Bryan"></a>
+                    alt="Stephanie Tonnesen & Greg Bryan"></img>
                 <img src="images/jhw-dwarf-galaxies.jpg" width="460" height="230"
-                    alt="John Wise"></a>
+                    alt="John Wise"></img>
                 <img src="images/iso_and_volume_02_sm.jpg" width="460" height="230"
-                    alt="Elizabeth Tasker"></a>
+                    alt="Elizabeth Tasker"></img>
                 <img src="images/cosmo.jpg" width="460" height="230"
-                    alt="Norman et al"></a>
+                    alt="Norman et al."></img>
               </div>
             </div>
             <div class="row">
-              <div class="span8" style="margin-left:50px;">
+              <div class="span6" style="margin-left:50px;">
                 <p>Image credit: <span id="caption"></span></p>
               </div>
             </div>
           </div>
-          <div class="span8">
+          <div class="span6">
             <div class="row">
-              <div class="span4">
+              <div class="span3">
                 <h2>Getting Enzo</h2>
                 <p>Enzo can be obtained in several places, corresponding to the
                 degree of stability and development accessibility.</p>
               </div>
-              <div class="span4">
+              <div class="span3">
                 <h2>Help!</h2>
                 <p>There are several places to get help with Enzo, from mailing
                 lists to documentation to online tutorials and recordings of
@@ -153,22 +158,22 @@
               </div>
             </div> <!-- inner row -->
             <div class="row">
-              <div class="span4">
-                <p><a class="btn success" href="#gettingenzo">Let's go! &raquo;</a></p>
+              <div class="span3">
+                <p><a class="btn btn-success" href="#gettingenzo">Let's go! &raquo;</a></p>
               </div>
-              <div class="span4">
+              <div class="span3">
                 <p><a class="btn" href="#help">Help me out! &raquo;</a></p>
               </div>
             </div> <!-- inner row -->
             <div class="row" style="padding: 1.0em;">&nbsp;</div>
             <div class="row">
-              <div class="span4">
+              <div class="span3">
                 <h2>Developing</h2>
                 <p>Enzo is developed in the open by a community of developers
                 from different institutions.  Contributions, fixes, and changes
                 are all welcomed!</p>
               </div>
-              <div class="span4">
+              <div class="span3">
                 <h2>Community</h2>
                 <p>There are several places to get help with Enzo, from mailing
                 lists to documentation to online tutorials and recordings of
@@ -176,10 +181,10 @@
               </div>
             </div> <!-- inner row -->
             <div class="row">
-              <div class="span4">
+              <div class="span3">
                 <p><a class="btn" href="#developing">Develop! &raquo;</a></p>
               </div>
-              <div class="span4">
+              <div class="span3">
                 <p><a class="btn" href="#community">Engage &raquo;</a></p>
               </div>
             </div> <!-- inner row -->
@@ -192,25 +197,25 @@
           <a name="gettingenzo" class="anchor"><h1>Getting Enzo</h1></a>
         </div>
         <div class="row">
-          <div class="span4">
+          <div class="span3">
             <h3>Places To Go</h3>
             <ul>
-              <li><a href="http://enzo.googlecode.com/">Stable Project Page</a></li>
-              <li><a href="http://bitbucket.org/enzo/">Development Page</a></li>
-              <li><a href="http://code.google.com/p/enzo/downloads/list">Downloads</a></li>
-              <li><a href="http://code.google.com/p/enzo/wiki/EnzoBootCamp">Enzo Boot Camp</a></li>
+              <li><a href="https://bitbucket.org/enzo/enzo-stable">Bitbucket: Stable Version</a></li>
+              <li><a href="https://bitbucket.org/enzo/enzo-dev">Bitbucket: Development Version</a></li>
+              <li><a href="https://bitbucket.org/enzo/enzo-stable/downloads">Tarfile Downloads</a></li>
+              <li><a href="BootCamp.html">Enzo Boot Camp</a></li>
             </ul>
           </div>
-          <div class="span12">
+          <div class="span9">
             <div class="row">
-              <div class="span12">
-                <div class="alert-message block-message success">
+              <div class="span9">
+                <div class="alert alert-block success">
                     <p>The easiest way to get up and running with Enzo is to
                     follow our Enzo Boot Camp, which walks you through
                     installation, running test problems, and making some simple
                     images.</p>
                     <div class="alert-actions">
-                        <a class="btn small" href="http://code.google.com/p/enzo/wiki/EnzoBootCamp">Get up and running! &raquo;</a>
+                        <a class="btn btn-small" href="BootCamp.html">Get up and running! &raquo;</a>
                     </div>
                 </div>
               </div>
@@ -224,7 +229,7 @@
                <a href="#developing">development guide</a>.</p>
             <p>The simplest way to get a copy of the current stable source code
                is to clone the repository using Mercurial:</p>
-               <pre class="prettyprint">$ hg clone https://code.google.com/p/enzo/</pre>
+               <pre class="prettyprint">$ hg clone https://bitbucket.org/enzo/enzo-stable</pre>
             </p>
             <p>
                Makefiles are provided for many commonly-used supercomputers,
@@ -243,18 +248,18 @@
           <a name="help" class="anchor"><h1>Help!</h1></a>
         </div>
         <div class="row">
-          <div class="span4">
+          <div class="span3">
             <h3>Places To Go</h3>
             <ul>
               <li><a href="doc/">Current Documentation</a></li>
               <li><a href="irc.html">Live Chat</a></li>
               <li><a href="https://groups.google.com/forum/#!forum/enzo-users">Users' Mailing List</a></li>
               <li><a href="https://groups.google.com/forum/#!forum/enzo-dev">Dev Mailing List</a></li>
-              <li><a href="http://code.google.com/p/enzo/issues/">Bug Tracker</a></li>
+	      <!-- <li><a href="http://code.google.com/p/enzo/issues/">Bug Tracker</a></li> -->
               <li><a href="http://vimeo.com/channels/123342">Workshop Videos</a></li>
             </ul>
           </div>
-          <div class="span12">
+          <div class="span9">
             <p>
               Using Enzo effectively can be a bit challenging at times -- but
               there is plently of assistance available, thanks to the broad
@@ -272,17 +277,15 @@
               both a <a
               href="https://groups.google.com/forum/#!forum/enzo-users">user-centeric</a>
               mailing list as well as a mailing list more suited for <a
-              href="https://groups.google.com/forum/#!forum/enzo-dev">development
-              issues</a>.  If this still doesn't help, we are tracking known
-              issues in a public <a
-              href="http://code.google.com/p/enzo/issues/">bug tracker</a>.
+              href="https://groups.google.com/forum/#!forum/enzo-dev">development issues</a>. 
+
+	      <!-- If this still doesn't help, we are tracking known issues in a public <a href="http://code.google.com/p/enzo/issues/">bug tracker</a>. -->
             </p>
             <p>
               There are also usually a couple people in the channel
               <code>#enzo</code> on <code>irc.freenode.org</code>.  You can get
               there with an IRC client like Adium, or we even have a <a
-              href="irc.html">website</a> that will connect you <em>right in
-              your browser</em>!
+              href="irc.html">website</a> that will connect you <em>right in your browser</em>!
             </p>
           </div>
         </div>
@@ -293,20 +296,20 @@
           <a name="developing" class="anchor"><h1>Developing Enzo</h1></a>
         </div>
         <div class="row">
-          <div class="span4">
+          <div class="span3">
             <h3>Places To Go</h3>
             <ul>
               <li><a href="doc/developer_guide/index.html">Developer Guide</a></li>
               <li><a href="https://bitbucket.org/enzo/enzo-dev/fork">Fork Enzo!</a></li>
               <li><a href="https://groups.google.com/forum/#!forum/enzo-dev">Dev Mailing List</a></li>
               <li><a href="https://bitbucket.org/enzo/enzo-dev/">Development Source Code</a></li>
-              <li><a href="http://enzo.googlecode.com/">Stable Source Code</a></li>
+              <li><a href="https://bitbucket.org/enzo/enzo-stable/">Stable Source Code</a></li>
             </ul>
           </div>
-          <div class="span12">
+          <div class="span9">
             <div class="row">
-              <div class="span12">
-                <div class="alert-message block-message alert">
+              <div class="span9">
+                <div class="alert alert-block warning">
                     <p>
                       If you've already familiarized yourself with the code
                       base, the best way to get started developing is to create
@@ -314,8 +317,8 @@
                       contributed changes.
                     </p>
                     <div class="alert-actions">
-                        <a class="btn small" href="doc/developer_guide/index.html">Read the dev guide &raquo;</a>
-                        <a class="btn success small" href="http://bitbucket.org/enzo/enzo-dev/fork">Fork! &raquo;</a>
+                        <a class="btn btn-small" href="doc/developer_guide/index.html">Read the dev guide &raquo;</a>
+                        <a class="btn btn-success btn-small" href="http://bitbucket.org/enzo/enzo-dev/fork">Fork! &raquo;</a>
                     </div>
                 </div>
               </div>
@@ -343,12 +346,7 @@
               href="https://groups.google.com/forum/#!forum/enzo-dev">developer
               mailing list</a>, where you should feel free to ask questions if
               you get stuck.  It might also be a good idea to familiarize
-              yourself with <a
-              href="http://mercurial.selenic.com/">Mercurial</a> and to browse
-              the <a
-              href="https://bitbucket.org/enzo/enzo-dev/">development</a> and
-              <a href="http://enzo.googlecode.com/">stable</a> versions of the
-              Enzo source.
+              yourself with <a href="http://mercurial.selenic.com/">Mercurial</a> and to browse the <a href="https://bitbucket.org/enzo/enzo-dev/">development</a> version of the Enzo source.
             </p>
           </div>
         </div>
@@ -359,7 +357,7 @@
           <a name="community" class="anchor"><h1>The Enzo Community</h1></a>
         </div>
         <div class="row">
-          <div class="span4">
+          <div class="span3">
             <h3>Places To Go</h3>
             <ul>
               <li><a href="https://groups.google.com/forum/#!forum/enzo-users">Users' Mailing List</a></li>
@@ -368,7 +366,7 @@
               <li><a href="http://lca.ucsd.edu/workshops/enzo2010/">2010 Users' Workshop</a></li>
             </ul>
           </div>
-          <div class="span12">
+          <div class="span9">
             <p>
               Enzo users and developers are, on the whole, a pretty active
               community.  We are endeavoring to hold biannual developer
