@@ -90,7 +90,7 @@
 	    <div id="Enzo22" class="accordion-body collapse in">
 	      <div class="accordion-inner">
 
-		<p><i>Release Date &ndash; Nov. 19, 2012</i></p>
+		<p><i>Release Date &ndash; Nov. 26, 2012</i></p>
 		
 		<ul class="nav nav-tabs">
 		  <li class="active"><a href="#releasenotes22" data-toggle="tab">Release Notes</a></li>
@@ -104,38 +104,19 @@
 		    
 		    <ol>
 		      <li>
-			New physics capabilities
-			<ul>
-			  <li>
-			    Supernova Ia feedback
-			    <p>[Description from J. Wise]</p>
-			  </li>
-			  <li>
-			    H<sub>2</sub>-regulated star formation &mdash; A new star maker in which star formation rate is proportional to the density of molecular hydrogen (determined from Krumholz, McKee, & Tumlinson 2009), rather than total gas density.
-			  </li>
-			  <li>
-			    Support for a polytropic equation of state
-			    <p>[Description from C. Hummels]</p>
-			  </li>
-			  <li>
-			    Support for enforcing approximately constant spatial resolution in cosmological AMR simulations
-			    <p>[Description from C. Hummels]</p>
-			  </li>
-			</ul>
+			<b>New physics capabilities</b> &mdash; (a) Thermal and chemical feedback from Type Ia supernovae, with mass loss and luminosity fits provided by K. Nagamine; (b) H<sub>2</sub>-regulated star formation, in which the star formation rate is proportional to the density of molecular hydrogen (determined from Krumholz, McKee, & Tumlinson 2009), rather than total gas density; (c) Support for a polytropic equation of state [Description from C. Hummels]; (d) Support for enforcing approximately constant spatial resolution in cosmological AMR simulations [Description from C. Hummels].
 		      </li>
 		      
 		      <li>
-			Timing and performance measurement and plotting tools &mdash; Support for simple, lightweight measurements for the timing and performance of Enzo.  This allows one to examine which functions are using the majority of the simulation runtime, and how this varies across multiple processors.
+			<b>Timing and performance measurement and plotting tools</b> &mdash; Support for simple, lightweight measurements for the timing and performance of Enzo.  This allows one to examine which functions are using the majority of the simulation runtime, and how this varies across multiple processors.
 		      </li>
 		      
 		      <li>
-			Improved Documentation
-			<p>[Description from J. Kim, J. Wise, or C. Hummels]</p>
+			<b>Improved Documentation</b> &mdash; (a) Descriptions of 175 previously undocumented parameters; (b) Parameters have been broken up into groups; (c) Brief explanations of the functionality provided by (most) Enzo source files; (d) Description of the new Enzo performance timers; (e) Examples of how to debug Enzo.
 		      </li>
 		      
 		      <li>
-			Improvements to Answer Testing
-			<p>[Description from S. Skillman and/or B. Smith]</p>
+			<b>Upgrades to the Enzo Answer Testing Framework</b> &mdash; Includes both functional improvements and vastly improved documentation. The results of two test suites ("quick" and "push") have been uploaded to an Amazon Cloud instance, allowing users to compare to an Enzo Community "gold standard". Alternatively, answer testing can also be done by comparing to local results.
 		      </li>
 		      
 		    </ol>
@@ -148,7 +129,7 @@
 			Enzo's main webpage continues to be <a href="http://enzo-project.org">http://enzo-project.org</a>. Links and information can be found here for both developers and general users.
 		      </li>
 		      <li>
-			Both <a href="https://bitbucket.org/enzo/enzo-stable">stable</a> <b>[NOT YET!]</b> and <a href="https://bitbucket.org/enzo/enzo-dev">development</a> versions of the Enzo code are now hosted on Bitbucket.
+			Both <a href="https://bitbucket.org/enzo/enzo-stable">stable</a> and <a href="https://bitbucket.org/enzo/enzo-dev">development</a> versions of the Enzo code are now hosted on Bitbucket.
 		      </li>
 		      <li>
 			For news and updates please follow our google+ page: <a href="https://plus.google.com/115923030596894217717">The Enzo Project</a>
@@ -158,15 +139,15 @@
 		  </div>
 		  <div class="tab-pane" id="changelog22">
 		    <ul>
-		      <li> New Feature: Supernova Ia feedback </li>
+		      <li> New Feature: Supernova Ia feedback (no PR) </li>
 		      <li> New Feature: H<sub>2</sub>-regulated star formation prescription (<a href="https://bitbucket.org/enzo/enzo-dev/pull-request/41">PR #41</a>) </li>
 		      <li> New Feature: Support for a polytropic equation of state. </li>
-		      <li> New Feature: Support for enforcing approximately constant spatial resolution in cosmological AMR simulations </li>
+		      <li> New Feature: Support for enforcing approximately constant spatial resolution in cosmological AMR simulations. </li>
 		      <li> New Feature: Light-weight timing and performance measuring tool (<a href="https://bitbucket.org/enzo/enzo-dev/pull-request/35">PR #35</a>)</li>
 		      <li> Enhancement: Improved inline yt analysis. (<a href="https://bitbucket.org/enzo/enzo-dev/pull-request/13">PR #13</a>)</li>
 		      <li> Enhancement: Support for ghost-zone input/output. (<a href="https://bitbucket.org/enzo/enzo-dev/pull-request/8">PR #8</a>)</li>
-		      <li> Enhancement: Reorganized and improved code documentation. (many PR's)</li>
-		      <li> Enhancement: Improvements to answer testing. </li>
+		      <li> Enhancement: Reorganized and improved code documentation. (<a href="https://bitbucket.org/enzo/enzo-dev/pull-request/79">PR #79</a>, and many more)</li>
+		      <li> Enhancement: Improvements to answer testing. (<a href="https://bitbucket.org/enzo/enzo-dev/pull-request/82">PR #82</a>)</li>
 		      <li> Enhancement: Docs for enzo performance measurement/analysis. (<a href="https://bitbucket.org/enzo/enzo-dev/pull-request/38">PR #38</a>) </li>
 		      <li> Bugfix: Generalizing the conversion to conserved quantities. (<a href="https://bitbucket.org/enzo/enzo-dev/pull-request/75">PR #75</a>) </li>
 		      <li> Bugfix: Fixing the set-acceleration-boundary compile flag. (<a href="https://bitbucket.org/enzo/enzo-dev/pull-request/77">PR #77</a>) </li>
