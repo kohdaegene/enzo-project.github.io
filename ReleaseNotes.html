@@ -90,7 +90,7 @@
 	    <div id="Enzo22" class="accordion-body collapse in">
 	      <div class="accordion-inner">
 
-		<p><i>Release Date &ndash; Nov. 26, 2012</i></p>
+		<p><i>Release Date &ndash; Nov. 30, 2012</i></p>
 		
 		<ul class="nav nav-tabs">
 		  <li class="active"><a href="#releasenotes22" data-toggle="tab">Release Notes</a></li>
@@ -108,7 +108,7 @@
 		      </li>
 		      
 		      <li>
-			<b>Timing and performance measurement and plotting tools</b> &mdash; Support for simple, lightweight measurements for the timing and performance of Enzo.  This allows one to examine which functions are using the majority of the simulation runtime, and how this varies across multiple processors.
+			<b>Upgrades to the Enzo Answer Testing Framework</b> &mdash; Includes both functional improvements and vastly improved documentation. The results of two test suites ("quick" and "push") have been uploaded to an Amazon Cloud instance, allowing users to compare to an Enzo Community "gold standard". Alternatively, answer testing can also be done by comparing to locally generated results.
 		      </li>
 		      
 		      <li>
@@ -116,7 +116,11 @@
 		      </li>
 		      
 		      <li>
-			<b>Upgrades to the Enzo Answer Testing Framework</b> &mdash; Includes both functional improvements and vastly improved documentation. The results of two test suites ("quick" and "push") have been uploaded to an Amazon Cloud instance, allowing users to compare to an Enzo Community "gold standard". Alternatively, answer testing can also be done by comparing to local results.
+			<b>Code infrastructure improvement</b> &mdash; All fortran routines have been modified to explicitly specify the type at compile time, eliminating the need for compiler flags to ensure 64-bit precision.
+		      </li>
+		      
+		      <li>
+			<b>Timing and performance measurement and plotting tools</b> &mdash; Support for simple, lightweight measurements for the timing and performance of Enzo.  This allows one to examine which functions are using the majority of the simulation runtime, and how this varies across multiple processors.
 		      </li>
 		      
 		    </ol>
@@ -141,13 +145,12 @@
 		    <ul>
 		      <li> New Feature: Supernova Ia feedback (no PR) </li>
 		      <li> New Feature: H<sub>2</sub>-regulated star formation prescription (<a href="https://bitbucket.org/enzo/enzo-dev/pull-request/41">PR #41</a>) </li>
-		      <li> New Feature: Support for a polytropic equation of state. </li>
-		      <li> New Feature: Support for enforcing approximately constant spatial resolution in cosmological AMR simulations. </li>
 		      <li> New Feature: Light-weight timing and performance measuring tool (<a href="https://bitbucket.org/enzo/enzo-dev/pull-request/35">PR #35</a>)</li>
+		      <li> Enhancement: Fortran precisions are now explicit. (<a href="https://bitbucket.org/enzo/enzo-dev/pull-request/80">PR #80</a>)</li>
 		      <li> Enhancement: Improved inline yt analysis. (<a href="https://bitbucket.org/enzo/enzo-dev/pull-request/13">PR #13</a>)</li>
 		      <li> Enhancement: Support for ghost-zone input/output. (<a href="https://bitbucket.org/enzo/enzo-dev/pull-request/8">PR #8</a>)</li>
 		      <li> Enhancement: Reorganized and improved code documentation. (<a href="https://bitbucket.org/enzo/enzo-dev/pull-request/79">PR #79</a>, and many more)</li>
-		      <li> Enhancement: Improvements to answer testing. (<a href="https://bitbucket.org/enzo/enzo-dev/pull-request/82">PR #82</a>)</li>
+		      <li> Enhancement: Improvements to answer testing. (<a href="https://bitbucket.org/enzo/enzo-dev/pull-request/82">PR #82</a>, and many more)</li>
 		      <li> Enhancement: Docs for enzo performance measurement/analysis. (<a href="https://bitbucket.org/enzo/enzo-dev/pull-request/38">PR #38</a>) </li>
 		      <li> Bugfix: Generalizing the conversion to conserved quantities. (<a href="https://bitbucket.org/enzo/enzo-dev/pull-request/75">PR #75</a>) </li>
 		      <li> Bugfix: Fixing the set-acceleration-boundary compile flag. (<a href="https://bitbucket.org/enzo/enzo-dev/pull-request/77">PR #77</a>) </li>
