@@ -56,6 +56,7 @@
             <li class="dropdown">
 	      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Enzo Docs <span class="caret"></span></a>
               <ul class="dropdown-menu">
+                <li><a href="docs/2.3/">Version 2.3</a></li>
                 <li><a href="docs/2.2/">Version 2.2</a></li>
                 <li><a href="docs/2.1/">Version 2.1</a></li>
                 <li><a href="docs/2.0/">Version 2.0</a></li>
@@ -79,6 +80,153 @@
           <a name="releasenotes" class="anchor"><h1>Release Notes</h1></a>
         </div>
 
+	  <div class="accordion-group">
+	    <div class="accordion-heading">
+	      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Enzo23">
+		<h2>Enzo 2.3</h2>
+	      </a>
+	    </div>
+
+	    <div id="Enzo23" class="accordion-body collapse in">
+	      <div class="accordion-inner">
+
+		<p><i>Release Date &ndash; July. 9, 2013</i></p>
+		
+		<ul class="nav nav-tabs">
+		  <li class="active"><a href="#releasenotes23" data-toggle="tab">Release Notes</a></li>
+		  <li><a href="#changelog23" data-toggle="tab">Changelog</a></li>
+		</ul>
+	
+		<div class="tab-content">
+		  <div class="tab-pane active" id="releasenotes23">
+
+              We are pleased to announce the joint release of Enzo2.3 and the
+              Enzo method paper, entitled "Enzo: An Adaptive Mesh Refinement
+              Code for Astrophysics."  Enzo2.3 brings some new physics packages,
+              improvements to the code, and some needed bug fixes.  The method
+              paper describes in detail the algorithms used for every physics
+              packages presented in this release, along with test problems and a
+              description of the community development practices that have made
+              the code so successful. 
+
+              The new physics modules in Enzo2.3 include a constrained transport
+              MHD method (MHDCT) and a new radiation background described by Haardt &amp;
+              Madau 2012,  a PPM implementation for CUDA, and improvements to
+              the CUDA MHD solver.  Code improvements include MPI performance
+              timers and improvements to the inline interface between Enzo and
+              the analysis package yt, and several new problem types, including
+              a cluster potential problem, a magnetic reconnection problem that
+              utilizes the new MHDCT solver, and a particle orbit problem.  Bug fixes
+              to the gravity, chemistry, and radiation solvers are also
+              included. <br>
+
+              The components of this release can be found by following these
+              links:
+              <ul>
+                  <li> The paper can be found on <a href = arxiv.org> this
+                      link</a>.<br>
+                <li> The code to reproduce the tests can be found at
+                <a href https://bitbucket.org/enzo/enzo-method-paper> here</a><br>
+              Enzo2.3 can be found https://bitbucket.org/enzo/enzo-stable, 
+                <li> the continually updated development branch
+                can be found <a
+                    href=https://bitbucket.org/enzo/enzo-dev>here</a> <br>
+                <li> Documentation can be found at <a href  = enzo-project.org> enzo-project.org </a>, along with links
+              to the above.
+          </ul>
+		  </div>
+		  <div class="tab-pane" id="changelog23">
+		    <ul>
+                <li> New Feature: MHDCT, divergence free MHD 
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/121/mhdct"> PR #121</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/156"> PR #156</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/160"> PR #160</a>)
+                <li> New Feature: New Haard &amp; Madau 2012 radiation background 
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/143"> PR #143</a>)
+                <li> New Feature: Second derivative refinement criteria 
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/164"> PR #164</a>)
+                <li> New Feature: New TestOrbit problem for orbiting point masses 
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/152"> PR #152</a>)
+                <li> New Feature: CUDA PPM solver
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/78"> PR #78</a>)
+                <li> New Feature: Supermassive black hole feedback 
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/119"> PR #119</a>)
+                <li> Enhancement: New additions to the RefineRegion mechanics
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/155"> PR #155</a>)
+                <li> Enhancement: Improvements to the gravity solver
+                        (
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/120"> PR #120</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/124"> PR #124</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/131"> PR #131</a>
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/163"> PR #163</a>,
+                        )
+                <li> Enhancement: Improvements to the CUDA MHD solver
+                <li> Enhancement: New output mechanism for debugging difficult code
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/103"> PR #103</a>)
+                <li> Enhancement: Updates to documentation
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/94"> PR #94</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/104"> PR #104</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/140"> PR #140</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/141"> PR #141</a>)
+                <li> Enhancement: Performance timers for communication
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/139"> PR #139</a>)
+                <li> Enhancement: Updates to test problems, test runner, and inits
+                        (
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/87"> PR #87</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/89"> PR #89</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/91"> PR #91</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/93"> PR #93</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/95"> PR #95</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/96"> PR #96</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/97"> PR #97</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/98"> PR #98</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/99"> PR #99</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/100"> PR #100</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/101"> PR #101</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/102"> PR #102</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/107"> PR #107</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/108"> PR #108</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/110"> PR #110</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/113"> PR #113</a>
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/123"> PR #123</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/132"> PR #132</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/133"> PR #133</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/149"> PR #149</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/146"> PR #146</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/151"> PR #151</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/154"> PR #154</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/161"> PR #161</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/167"> PR #167</a>,
+                        )
+                <li> Enhancement: Improvements to the enzo/yt inline interface
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/131"> PR #131</a>)
+                <li> Enhancement: NumberOfGhostZones is now a run-time parameter
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/84"> PR #84</a>)
+                <li> Bugfix: OutputOnDensity fixes
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/122"> PR #122</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/136"> PR #136</a>)
+                <li> Bugfix:  Cooling fixes
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/126"> PR #126</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/136"> PR #136</a>)
+                <li> Bugfix: Ray tracer bugfixes for isolaced BCs, constant dt, memory bug
+                        (
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/144"> PR #144</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/158"> PR #158</a>)
+                <li> Bugfix: Timestep bug fixed for multispecies
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/153"> PR #153</a>)
+                <li> Bugfix: Sink particle fix
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/129"> PR #129</a>)
+                <li> Bugfix: Set acceleration boundary updates
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/88"> PR #88</a>)
+		    </ul>
+		  </div>
+		</div>
+		
+		
+	      </div>
+	    </div>
+	  </div>
+
 	<div class="accordion" id="accordion2">
 	  <div class="accordion-group">
 	    <div class="accordion-heading">
@@ -87,7 +235,7 @@
 	      </a>
 	    </div>
 
-	    <div id="Enzo22" class="accordion-body collapse in">
+	    <div id="Enzo22" class="accordion-body collapse">
 	      <div class="accordion-inner">
 
 		<p><i>Release Date &ndash; Nov. 30, 2012</i></p>
