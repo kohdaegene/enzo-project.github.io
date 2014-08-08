@@ -42,8 +42,7 @@
 	      <ul class="dropdown-menu">
                 <li><a href="ReleaseNotes.html">Release Notes</a></li>
                 <li><a href="doc/">Current Documentation</a></li>
-                <li><a href="https://bitbucket.org/enzo/enzo-stable">Stable Code</a></li>
-                <li><a href="https://bitbucket.org/enzo/enzo-dev">Development Code</a></li>
+                <li><a href="https://bitbucket.org/enzo/enzo-dev">Code Repository</a></li>
 		<li><a href="BootCamp.html">Enzo Boot Camp</a></li>
                 <li><a href="irc.html">IRC</a></li>
 	      </ul>
@@ -80,14 +79,211 @@
           <a name="releasenotes" class="anchor"><h1>Release Notes</h1></a>
         </div>
 
-	  <div class="accordion-group">
+		<div class="accordion-group">
+	    <div class="accordion-heading">
+	      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Enzo24">
+		<h2>Enzo 2.4</h2>
+	      </a>
+	    </div>
+
+	    <div id="Enzo24" class="accordion-body collapse in">
+	      <div class="accordion-inner">
+
+		<p><i>Release Date &ndash; Aug. 8, 2013</i></p>
+		
+		<ul class="nav nav-tabs">
+		  <li class="active"><a href="#releasenotes24" data-toggle="tab">Release Notes</a></li>
+		  <li><a href="#changelog24" data-toggle="tab">Changelog</a></li>
+		</ul>
+	
+		<div class="tab-content">
+		  <div class="tab-pane active" id="releasenotes24">
+            
+            <p>
+            We are pleased to announce the release of version 2.4 of the Enzo
+            code.  This is a periodic release that includes all changes
+            committed to the Enzo BitBucket repository since July 2013. This
+            release contains some new features and a number of enhancements and
+            bugfixes.
+            </p>
+            
+            <p>
+            Enzo now has bindings to version 1.0 of the grackle chemistry and
+            cooling library.  Grackle is based on Enzo's own cooling and
+            chemistry code and includes updated rate and chemistry tables, as
+            well a number of enhancements and new features that are not
+            available in Enzo's native chemistry and cooling modules.
+            </p>
+
+            <p>
+            Enzo's solvers and physics modules have also seen improvements,
+            including updates for the GPU MHD solver, the FLD solver, and the
+            MHD-CT solver, the Jeans pressure floor, the Cen &amp; Ostriker star
+            particle, tracer particles, and particle splitting.
+            </p>
+
+            <p>
+            There have also been a number of infrastructure improvements,
+            including a new progress meter script (which allows the user to
+            monitor simulations during runtime), updates for geometric
+            refinement regions and the shear refinement criterion, improved
+            control over the frequency of hierarchy rebuilds, updates for test
+            problem initialization (which is now more memory efficient), and
+            improvements to the GalaxySimulation, KelvinHelmholtz, and
+            CosmologySimulation problem types.  There is also a new rotating
+            turbulent sphere problem type.
+            </p>
+
+            <p>
+            There have also been a number of significant bugfixes, including
+            several that may increase the stability and efficiency of production
+            multi-physics simulations.
+            </p>
+
+            <p>
+            We urge all users to update to the latest version if they are using
+            Enzo 2.3 or earlier.  While one can obtain the release by
+            downloading a tar file, we strong encourage all users to use enzo
+            from a clone of the mercurial repository, which will facilitate
+            reproducible work with the code.
+            </p>
+
+		  </div>
+		  <div class="tab-pane" id="changelog24">
+		    <ul>
+                <li> New Feature: A progess meter script has been added to the bin directory
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/233"> PR #233</a>)
+                <li> New Feature: Added a rotating turbulent sphere test problem
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/206"> PR #206</a>)
+                <li> New Feature: Hierarchy rebuilds can now be controlled dynamically
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/196"> PR #196</a>)
+                <li> New Feature: Grackle chemistry and cooling
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/194"> PR #194</a>)
+                <li> Enhancement: Conversion factors from code units to CGS units are now written with increased precision
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/239"> PR #239</a>)
+                <li> Enhancement: Improved compatibility for cosmology simulations that include
+                 FLD, chemistry, and cooling.
+                        (
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/230"> PR #230</a>,
+                        )
+                <li> Enhancement: Significant updates for the unigrid FLD solver
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/216"> PR #216</a>)
+                <li> Enhancement: Particle splitting has been reimplemented with an improved 
+                 algorithm
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/188"> PR #188</a>)
+                <li> Enhancement: CosmologySimulation can now be run with MHDCT
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/223"> PR #223</a>)
+                <li> Enahncement: PPM simulations that use MinimumPressureSupport now use an 
+                 improved algorithm for runs with cooling
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/220"> PR #220</a>)
+                <li> Enhancement: Added a parameter that allows fully manual control over the root
+                 grid decomposition
+                        (
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/219"> PR #219</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/226"> PR #226</a>,
+                        )
+                <li> Enhancement: Documentation on how to add a new BaryonField has been added.
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/221"> PR #221</a>)
+                <li> Enhancement: The galaxy simulation can now be run without using comoving
+                 coordinates
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/204"> PR #204</a>)
+                <li> Enhancement: Added a timestep-independent star particle creation mechanism
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/197"> PR #197</a>)
+                <li> Enhancement: Improvements to the tracer particle implementation
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/193"> PR 193</a>)
+                <li> Enhancement: Improvements to the Kelvin-Helmholtz test problem
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/192"> PR #192</a>)
+                <li> Enhancement: Buffer zones on processor boundaries will now be properly
+                 flagged for refinement.
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/190"> PR #190</a>,
+                         <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/218"> PR #218</a>)
+                <li> Enhancement: The shear refinement criterion is now compatible with more
+                 simulation types
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/189"> PR #189</a>)
+                <li> Enhancement: AccelerationBoundary is now compatible with point source gravity
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/117"> PR #117</a>)
+                <li> Enhancement: Test problems will generate more efficient hierarchies during
+                 problem initialization
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/182"> PR #182</a>)
+                <li> Enhancement: Improvements for the CPU and GPU Dedner MHD solvers 
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/177"> PR #177</a>,
+                         <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/200"> PR #200</a>)
+               <li> Enhancement: New refine region mechanics
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/155"> PR #155</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/172"> PR #172</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/227"> PR #227</a>)
+               <li> Enhancement: MHDCT works with outflow boundary conditions
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/176"> PR #176</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/198"> PR #198</a>)
+                <li> Bugfix: Fixed an issue with the emissivity field in the FLD module having 
+            incorrect unit
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/241"> PR #241</a>)
+                <li> Bugfix: Compilation issues for the FLD module in 32-bit mode have been 
+            resolved
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/240"> PR #240</a>)
+                <li> Bugfix: The internal energy field is no longer made conservative during flux
+            correction if cooling is turned on
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/228"> PR #228</a>)
+                <li> Bugfix: Fixed an issue where incorrect fluxes were being generated for
+            the internal energy in simulations that used flux correction.  This
+            may improve stability in some applications.
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/217"> PR #217</a>)
+                <li> Bugfix: FinalRedshift is no longer derived from StopTime, preventing
+            desynchronization between these parameters 
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/236"> PR #236</a>)
+                <li> Bugfix: The FLD radiative transfer parameter file is now only written by
+            the root processor
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/235"> PR #235</a>)
+                <li> Bugfix: Fixed issues with mpgrafic and P-GroupFinder
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/215"> PR #215</a>)
+                <li> Bugfix: Fixed issues with transport of color fields at refinement boundaries.
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/199"> PR #199</a>)
+                <li> Bugfix: Remove AddParticleAttributes, which sometimes causes particle 
+            metadata to be incorrectly zeroed out
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/208"> PR #208</a>)
+                <li> Bugfix: The -g command line option now works as expected
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/207"> PR #207</a>)
+                <li> Bugfix: A buggy MIN macro was causing ComputeTimestep to be called twice
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/200"> PR #200</a>)
+                <li> Bugfix: Fix for simulations that use ExternalGravity but no self gravity
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/201"> PR #201</a>)
+                <li> Bugfix: Inits now uses increased precision when writing subgrid locations.
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/195"> PR #195</a>)
+                <li> Bugfix: Use Agg as the plotting backend for performance_tools
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/192"> PR #192</a>)
+                <li> Bugfix: AddFeedbackSphere is now compatible with the Zeus hydro solver 
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/187"> PR #187</a>)
+                <li> Bugfix: Fixed issues MHD test problems
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/185"> PR #185</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/186"> PR #186</a>)
+                <li> Bugfix: Fixes for uninitialized memory errors reported by valgrind  
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/184"> PR #181</a>,
+                        <a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/184"> PR #184</a>)
+                <li> Bugfix: Fixed issues with compiling in mixed precision mode
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/181"> PR #181</a>)
+                <li> Bugfix:  Fixed an issue with NumberOfOutputsBeforeExit functionality
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/179"> PR #179</a>)
+                <li> Bugfix: Fixed an issue with header include order in the RK solvers 
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/178"> PR #178</a>)
+                <li> Bugfix: MagneticField is not set to NULL after being deleted
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/175"> PR #175</a>)
+                <li> Bugfix: Fixed an issue that caused the build to fail if hg is not 
+            present
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/174"> PR #174</a>)
+                <li> Bugfix: Fixed Haardt &amp; Madau 2012 radiation field rates
+                        (<a href = "https://bitbucket.org/enzo/enzo-dev/pull-request/171"> PR #171</a>)
+		    </ul>
+		  </div>
+		</div>
+       </div>
+       <div class="accordion-group">
 	    <div class="accordion-heading">
 	      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Enzo23">
 		<h2>Enzo 2.3</h2>
 	      </a>
 	    </div>
 
-	    <div id="Enzo23" class="accordion-body collapse in">
+	    <div id="Enzo23" class="accordion-body collapse">
 	      <div class="accordion-inner">
 
 		<p><i>Release Date &ndash; July. 10, 2013</i></p>
