@@ -93,22 +93,14 @@
 	
 	<h2>Getting Enzo</h2>
 
-	<p>With the release of Enzo 2.0 (and we&#x27;re happy to have continued with the 2.1, 2.2, and 2.3 releases!), a number of things about previous versions have changed.  For starters, the version control system has changed from Subversion (a centralized version control system) to Mercurial (a distributed version control system.)  A side effect of this is that getting the latest version of the code requires Mercurial, which has a slightly different syntax than Subversion and which operates in a fundamentally different fashion. </p>
+	<p>The simplest way to get a copy of the current stable source code
+               is to clone the repository using Mercurial:</p>
+               <pre class="prettyprint">$ hg clone https://bitbucket.org/enzo/enzo-dev</pre>
+        </p>
 	
-	<p>The Enzo documentation contains a discussion of some of the differences, as well as some suggestions for how to keep locally-versioned development private, for how to share it, and for how to navigate the repository.  Ultimately its goal is to put more power in the hands of users, so that collaboration can be swifter, broader, and more efficient. </p>
-	
-	<p>However, as noted above, it&#x27;s not always installed on all machines.  The yt project provides an installation script that creates a complete and isolated distribution of all the tools yt requires, including hg. It installs everything (including python) into a directory of your choosing, and can be deleted without affecting anything else on your system.  This installation script has been tested on most of the Teragrid as well as on a number of private clusters and Linux and OS X machines. </p>
-	
-	<p>The yt installation script now contains an option to check out a copy of the stable branch of Enzo, as well.  To get the installation script, download it from <a href="http://hg.yt-project.org/yt_analysis/raw/stable/doc/install_script.sh" rel="nofollow">http://hg.yt-project.org/yt_analysis/raw/stable/doc/install_script.sh</a> and open it in a text editor.  Set the variable INST_ENZO to 1, and execute it like so: </p>
-	
-	<pre class="prettyprint">$ bash install_script.sh</pre>
-	
-	<p>This will download all of the necessary dependencies for YT, which includes Mercurial and HDF5, and it will install them into an isolated directory. </p>
-	
-	<p>At the end of execution, you will be presented with a long concluding message.  In this message will be the path to Enzo. </p>
-	
-	<p>You must set the environment variables listed in the installation script whenever you want to use yt, or it may fail in some non-intuitive way. </p>
-	
+	<p>Mercurial (hg) is a revision-control system that is available on many
+	platforms (see <a href="https://www.mercurial-scm.org">www.mercurial-scm.org</a>).
+
 	<p>You can then use a pre-existing Makefile (if one exists for your machine) or modify one to point to either the system-wide installation of HDF5 and MPI or to the yt-installed HDF5 and the system-wide MPI.  However, since the process of setting up the Makefile can be a bit tricky, it&#x27;s discussed in more depth down below. </p>
 	
 	<h2>Setting Up Enzo</h2>
