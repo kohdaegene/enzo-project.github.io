@@ -55,6 +55,9 @@
             <li class="dropdown">
 	      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Enzo Docs <span class="caret"></span></a>
               <ul class="dropdown-menu">
+                <li><a href="docs/2.5/">Version 2.5</a></li>
+                <li><a href="docs/2.4/">Version 2.4</a></li>
+                <li><a href="docs/2.3/">Version 2.3</a></li>
                 <li><a href="docs/2.2/">Version 2.2</a></li>
                 <li><a href="docs/2.1/">Version 2.1</a></li>
                 <li><a href="docs/2.0/">Version 2.0</a></li>
@@ -95,17 +98,17 @@
 
 	<p>The simplest way to get a copy of the current stable source code
                is to clone the repository using Mercurial:</p>
-               <pre class="prettyprint">$ hg clone https://bitbucket.org/enzo/enzo-dev</pre>
+               <pre class="prettyprint">$ hg clone https://bitbucket.org/enzo/enzo-dev <br>$ hg update stable </pre>
         </p>
 	
 	<p>Mercurial (hg) is a revision-control system that is available on many
-	platforms (see <a href="https://www.mercurial-scm.org">www.mercurial-scm.org</a>).
+	platforms (see <a href="https://www.mercurial-scm.org">www.mercurial-scm.org</a>).  (Alternately if you prefer you can update to "week-of-code" instead of "stable" to use the development version).
 
 	<p>You can then use a pre-existing Makefile (if one exists for your machine) or modify one to point to either the system-wide installation of HDF5 and MPI or to the yt-installed HDF5 and the system-wide MPI.  However, since the process of setting up the Makefile can be a bit tricky, it&#x27;s discussed in more depth down below. </p>
 	
 	<h2>Setting Up Enzo</h2>
 	
-	<p>Change directories to the Enzo path, which should be resolvable as <tt>$(YT_DEST)/src/enzo-hg-stable</tt>.  The very first time you enter this directory, execute: </p>
+	<p>Change directories to the Enzo path.  The very first time you enter this directory, execute: </p>
 	
 	<pre class="prettyprint">$ ./configure</pre>
 	
