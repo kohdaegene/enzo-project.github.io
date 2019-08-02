@@ -82,6 +82,141 @@
           <a name="releasenotes" class="anchor"><h1>Release Notes</h1></a>
         </div>
 
+    <div class="accordion-group">
+	    <div class="accordion-heading">
+	      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#Enzo26">
+		<h2>Enzo 2.6</h2>
+	      </a>
+	    </div>
+
+	    <div id="Enzo26" class="accordion-body collapse in">
+	      <div class="accordion-inner">
+
+		<p><i>Release Date &ndash; August 2, 2019</i></p>
+		
+		<ul class="nav nav-tabs">
+		  <li class="active"><a href="#releasenotes26" data-toggle="tab">Release Notes</a></li>
+		  <li><a href="#changelog26" data-toggle="tab">Changelog</a></li>
+		</ul>
+	
+		<div class="tab-content">
+		  <div class="tab-pane active " id="releasenotes26">
+            
+
+		    <p> We are pleased to announce the release of Version 2.6 of
+		    the Enzo code. This is a periodic release that
+		    includes all changes committed to the Enzo
+		    BitBucket repository since March 2016. This
+		    release contains some new features and a number of
+		    enhancements and bugfixes.  </p>
+
+            <p> Our biggest change has been our transition from Mercurial 
+            to Git and a corresponding change from bitbucket to github. All 
+            future updates will only be found in our new github repository
+            (https://github.com/enzo-project/enzo-dev).</p>
+
+            <p> New features include: The long awaited Active Particle 
+            framework; Fuzzy Dark Matter solver and corresponding test problems; 
+            subgrid-scale turbulence model and corresponding test problem; 
+            magnetic supernova feedback for simple star particles. </p>
+
+            <p> There have been a number of enhancements to the hydro, MHD, 
+            radiation transport, and star particle routines, and a variety
+            of performance enhancements to the same set of packages. </p>
+		   
+            <p> There have also been a number of significant bugfixes, including 
+            several memory leaks. </p>
+
+            <p> We urge all users to update to the latest version if they are 
+            using Enzo 2.5 or earlier. While one can obtain the release by 
+            downloading a tar file, we strongly encourage all users to use Enzo 
+            from a clone of the git repository, which will facilitate 
+            reproducible work with the code. </p>
+
+            <p> For more information about Enzo, see https://enzo-project.org/. </p>
+		   
+            <p> For the release notes and changelog, see 
+            https://enzo-project.org/ReleaseNotes.html and the CHANGELOG 
+            file in the root directory of the enzo-dev repository. </p>
+
+		  </div>
+		  <div class="tab-pane" id="changelog26">
+		    <ul>
+		     <li>New Feature: Conversion from Mercurial+BitBucket to Git+GitHub</li>
+             <li>New Feature: Automated testing on GitHub with CircleCI (GH <a href="https://github.com/enzo-project/enzo-dev/pull/55">PR #55</a>)</li>
+             <li>New Feature: Fuzzy dark matter evolution module + test problems (GH <a href="https://github.com/enzo-project/enzo-dev/pull/61">PR #61</a>)</li>
+             <li>New Feature: Subgrid-scale turbulence modeling framework (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/407/add-subgrid-scale-sgs-turbulence-model/diff">PR #407</a>)</li>
+             <li>New Feature: Magnetic supernova feedback (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/346/magnetic-supernova-feedback/diff">PR #346</a>)</li>
+             <li>New Feature: Active particle framework + docs (GH <a href="https://github.com/enzo-project/enzo-dev/pull/57">PR #57</a>, <a href="https://github.com/enzo-project/enzo-dev/pull/83">PR #83</a>, <a href="https://github.com/enzo-project/enzo-dev/pull/85">PR #85</a>)</li>
+             <li>Enhancement: Two new types of refinement regions: "Must refine" and "cooling-based refinement" regions, both of which move. (GH <a href="https://github.com/enzo-project/enzo-dev/pull/59">PR #59</a>)</li>
+             <li>Enhancement: Star particle mass ramp added (GH <a href="https://github.com/enzo-project/enzo-dev/pull/68">PR #68</a>)</li>
+             <li>Enhancement: Zeldovich Pancake includes dark matter particles (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/435">PR #435</a>)</li>
+             <li>Enhancement: Python scripts in repository upgraded to Python 3 (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/351/ensure-we-can-build-enzo-if-python-is/diff">PR #351</a>, <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/363/updated-enzo-and-test-suite-to-be/diff">PR #363</a>, <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/437/brings-performance-tools-up-to-py3-and/diff">PR #437</a>)</li>
+             <li>Enhancement: All physical constants consolidated into a single header file (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/417/moving-all-local-constants-to-those-in/diff">PR #417</a>, <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/428/include-phys_constantsh-last-to-avoid/diff">428</a>, )</li>
+             <li>Enhancement: Cosmology simulations added to test suite (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/419/add-cosmology-simulation-to-test-suite/diff">PR #419</a>)</li>
+             <li>Enhancement: Test suite provides more information about running and crashing tests (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/339/make-verbose-test-output-print-details/diff">PR #339</a>)</li>
+             <li>Enhancement: Particle splitter has many new features (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/426/updates-to-particle-splitter/diff">PR #426</a>)</li>
+             <li>Enhancement: Updated MPI error handler to MPI 2+ standards (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/430/updating-the-mpi-error-handler-to-mpi-2/diff">PR #430</a>)</li>
+             <li>Enhancement: Additional must-refine particle capabilities: cell de-refinement (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/424/add-new-must-refine-particle-option/diff">PR #424</a>), ability for more complex conditionals (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/369/improving-mustrefineparticle-flagging/diff">PR #369</a>)</li>
+             <li>Enhancement: Adjust Grackle UV background treatment at high redshift (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/423/adjust-grackle-uvb-off-drop-parameters-if/diff">PR #423</a>)</li>
+             <li>Enhancement: H- and H2II photodetachment added to radiation transport and transport chemistry network and tests (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/390/hminus-component-added-to-rt/diff">PR #390</a>, <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/401/hminus-component-added-to-rt/diff">PR #401</a>, <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/409/optically-thin-radiation-and/diff">PR 409</a>, <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/410/bugfix-initialize-hm-and-h2ii-photo-fields/diff">PR #410</a>)</li>
+             <li>Enhancement: EvolveLevel and EvolveLevel_RK combined (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/364/combine-evolvelevel-and-evolvelevel_rk/diff">PR #364</a>)</li>
+             <li>Enhancement: Problem initializers now all use AllocatedGrids (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/404/update-problem-initializers-to-use/diff">PR #404</a>)</li>
+             <li>Enhancement: All test problems now use power-of-two refinement factor (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/340/make-all-test-problems-use-a-power-of-two/diff">PR #340</a>)</li>
+             <li>Enhancement: Expansion parameter/redshift now use tables, enabling non-standard cosmologies (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/393/use-a-table-for-redshift-time-calculations/diff">PR #393</a>)</li>
+             <li>Enhancement: Added stellar wind option to CollapseTest (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/388/i-added-a-small-routine-that-adds-stellar/diff">PR #388</a>)</li>
+             <li>Enhancement: Expanded feedback options in idealized SMBH and elliptical galaxy simulations (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/387/add-feedback-from-old-stars-in-idealized/diff">PR #387</a>)</li>
+             <li>Enhancement: Grackle updated to use H2 self-shielding approximation (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/349/updates-to-use-grackle-h2-self-shielding/diff">PR #349</a>)</li>
+             <li>Enhancement: Grackle supports user-supplied redshift in non-cosmological simulations (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/334/redshift-for-grackle-uvb-in-non/diff">PR #334</a>)</li>
+             <li>Enhancement: Updated Grackle interface to support Grackle 3.x (Grackle 2.x support discontinued) (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/347/updates-to-grackle-fields-and-api-for/diff">PR #347</a>)</li>
+             <li>Enhancement: Test suite updated to work with yt-3 (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/304/updating-the-test-suite-to-work-with-yt-3/diff">PR #304</a>)</li>
+             <li>Enhancement: Particles supported in GalaxySimulation when using DiskGravity (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/336/particle-support-for-diskgravity/diff">PR #336</a>)</li>
+             <li>Enhancement: Improved documentation:</li>
+             <ul>
+             <li>Dedner MHD (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/415/dedner-docs-and-branding/diff">PR #415</a>)</li>
+             <li>Enzo flowchart update (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/418/enzo-flowchart-fix-for-documentation/diff">PR #418</a>)</li>
+             <li>Recombined Enzo parameter list and expansion of physics/analysis capabilities section (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/412/documentation-updates/diff">PR #412</a>)</li>
+             <li>Added MUSIC IC description (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/376/changes-to-the-users-guide-added-music/diff">PR #376</a>)&nbsp;</li>
+             <li>Updated Quick-start guide (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/376/changes-to-the-users-guide-added-music/diff">PR #376</a>)</li>
+             <li>Updated FAQ including table of contents (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/377/in-docs-added-to-faq-and-added-faq-to/diff">PR #377</a>)</li>
+             <li>Updated parameter descriptions (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/367/updating-docs-and-removing-unused-params/diff">PR #367</a>)</li>
+             <li>Updated tutorial (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/372/small-changes-to-tutorial-in-documentation/diff">PR #372</a>)</li>
+             </ul>
+             <li>Bugfix: Fixes to map RadiationRedshift* parameters to Grackle (GH <a href="https://github.com/enzo-project/enzo-dev/pull/81">PR #81</a>)</li>
+             <li>Bugfix: Small tweak to hierarchy file reader - patch for pre-AP simulations (GH <a href="https://github.com/enzo-project/enzo-dev/pull/80">PR #80</a>)</li>
+             <li>Bugfix: Documentation updated to reflect hg-&gt;git conversion (GH <a href="https://github.com/enzo-project/enzo-dev/pull/63">PR #63</a>)</li>
+             <li>Bugfix: Makefile hg-&gt;git conversion (GH <a href="https://github.com/enzo-project/enzo-dev/pull/58">PR #58</a>)</li>
+             <li>Bugfix: Test that boundary condition files are correctly read (GH <a href="https://github.com/enzo-project/enzo-dev/pull/58">PR #58</a>)</li>
+             <li>Bugfix:Magnetic supernovae function with mixed precision (GH <a href="https://github.com/enzo-project/enzo-dev/pull/58">PR #58</a>)</li>
+             <li>Bugfix: Libconfig removed (GH <a href="https://github.com/enzo-project/enzo-dev/pull/67">PR #67</a>)</li>
+             <li>Bugfix: 128-bit particles compilation errors fixed (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/433/bugfix-compilation-and-restart-errors-with/diff">PR #433</a>), 32-bit compilation errors fixed (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/416/rolled-back-minor-changes-to-allow/diff">PR #416</a>, <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/425/bugfix-fix-issue-with-particles-32-compile/diff">PR #425</a>)</li>
+             <li>Bugfix: Memory leak in magnetic supernovae (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/421/fixing-memory-leak-in-magnetic-supernova/diff">PR #421</a>)</li>
+             <li>Bugfix: Misc. small runtime bug fixes (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/427/bugfix-ray-tracing-minor-bugfixes/diff">PR #427</a>, <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/429/misc-bugfixes/diff">PR #429</a>, <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/382/prevent-baryon-density-from-being-zero-in/diff">PR #382</a>, <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/355/solution-to-use-divergence-cleaning/diff">PR #355</a>, <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/353/obscure-undefined-behavior-bugfix/diff">PR #353</a>, <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/348/syntax-error-in/diff">PR #348</a>)</li>
+             <li>Bugfix: Cooling time calculation should include ghost zones (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/414/updated-cooling-time-calculation-to-also/diff">PR #414</a>)</li>
+             <li>Bugfix: Unused parameters removed (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/408/removing-unused-arguments-from-star-maker/diff">PR #408</a>, <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/385/removing-unused-parameter-making-sure/diff">PR #385</a>, <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/378/removing-more-unused-parameters/diff">PR #378</a>, <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/367/updating-docs-and-removing-unused-params/diff">PR #367</a>, <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/342/removing-unused-parameters/diff">PR #342</a>)</li>
+             <li>Bugfix: ErrorException.h cleanup (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/411/cleanups-for-errorexceptionsh/diff">PR #411</a>)</li>
+             <li>Bugfix: MHD-RK memory fix (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/405/mhd_rk-memory-fix/diff">PR #405</a>)</li>
+             <li>Bugfix: Grackle + radiation transport timestep fix (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/391/bugfix-correcting-the-timestep-sent-to/diff">PR #391</a>, <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/354/bugfix-correctly-set/diff">PR #354</a>)</li>
+             <li>Bugfix: Many small compilation bugs fixed (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/380/remove-unnecessary-cast-to-avoid-a/diff">PR #380</a>, <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/332/fixed-small-bug-relating-to-parentheses-in/diff">PR #332</a>, <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/328/add-missing-errorexceptionsh-includes-to/diff">PR #328</a>)</li>
+             <li>Bugfix: Removal of many uncompiled files (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/386/remove-uncompiled-files-from-src-enzo/diff">PR #386</a>)</li>
+             <li>Bugfix: CT MHD color species advection fixed (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/361/update-mhdct-species-colour-advection/diff">PR #361</a>)</li>
+             <li>Bugfix: HDF5 1.10 compatibility fix (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/371/bugfix-compatibility-fix-for-hdf5-110/diff">PR #371</a>)</li>
+             <li>Bugfix: Fix Ray tracing load balance crash (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/370/bugfix-ray-tracing-load-balancing-crash/diff">PR #370</a>)</li>
+             <li>Bugfix: Conduction timestep properly saved (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/341/fixed-conduction-timestep-calculation/diff">PR #341</a>)</li>
+             <li>Bugfix: Fixed rarefaction fan calculation in flux_twoshock.F (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/338/bug-fix-in-rarefaction-fan-in/diff">PR #338</a>)</li>
+             <li>Bugfix: Density floor in PPM solver (euler.F) changed from hard-coded to using pre-existing SmallRho parameter (BB <a href="https://bitbucket.org/enzo/enzo-dev/pull-requests/333/bug-fix-of-density-floor-in-ppm-solver/diff">PR #333</a>)</li>
+
+		    </ul>
+		  </div>
+		</div>
+		</div>
+		</div>
+		
+
+
+
+
+
 
 	<div class="accordion-group">
 	    <div class="accordion-heading">
